@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Дех'я",
+        "image": "../image/charecters/dehya_tall.png",
+        "min_level": "1",
+        "max_level": "90"
+      }
+]

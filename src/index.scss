@@ -1,0 +1,72 @@
+$text-color-lgtstyle: rgba(0, 0, 0, 0.6);
+$navbar-text-color-lgtstyle: rgb(255, 255, 255);
+
+@mixin margin {
+  margin: 0;
+}
+@mixin textSize($value, $spacing, $weight) {
+  font-weight: $weight;
+  font-size: $value*2;
+  line-height: $value*3;
+  letter-spacing: $spacing*0.5px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Oswald', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+
+  &-track {
+    background: #f1f1f1;
+  }
+
+  &-thumb {
+    background: #888;
+  }
+}
+
+#light{
+  & *{
+    color: $text-color-lgtstyle;
+  }
+  & .navbar *{
+    color: $navbar-text-color-lgtstyle;
+  }
+}
+
+button{
+  @include textSize(9px, 0, 700);
+  font-style: normal;
+  font-family: 'Karla', sans-serif;
+}
+h2{
+  @include textSize(16px, 0, 400);
+}
+h3{
+  @include textSize(10px, .3, 500);
+}
+a{
+  @include textSize(10px, .3, 500);
+  text-decoration: none
+}
+p{
+  @include textSize(7px, .5, 400);
+}
+ul{
+  padding: 0;
+}
+li{
+  @include textSize(8px, .3, 700);
+  list-style: none;
+}

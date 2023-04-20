@@ -7,7 +7,11 @@
       "full": "../images/characters/Dehya_Full.png",
       "icon": "../images/characters/Dehya_Icon.webp"
     },
-    "element": "Піро",
+    "element": {
+      "name": "Піро",
+      "icon": "",
+      "background": "../images/elemental-backgrounds/pyro_video.webm"
+    },
     "skills": {
       "normal_attack": {
         "name": "Напад піщаної бурі",

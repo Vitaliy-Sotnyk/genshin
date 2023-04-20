@@ -11,18 +11,21 @@ function App() {
     return (['', '']);
   }
 
+  /* */
   const characterData = JSON.parse(JSON.stringify(data));
+  const dehyaInfo = characterData.filter(character => character.name === "Дех'я")[0];
+  /* */
 
   return (
     <div className="App">
       <div className='background-video'>
-        <video className='background-video__video' src={`${characterData[0].element.background}`} autoPlay muted loop>
+        <video className='background-video__video' src={`${dehyaInfo.element.background}`} autoPlay muted loop>
           Your browser does not support the video tag.
         </video>
       </div>
       <header>
         <section className='character'>
-          <div className="character__backgroung" style={{ backgroundImage: `url(${characterData[0].images.full})` }}></div>
+          <div className="character__backgroung" style={{ backgroundImage: `url(${dehyaInfo.images.full})` }}></div>
           <h1 className="character__name">Дех'я</h1>
         </section>
         <section className='level'>

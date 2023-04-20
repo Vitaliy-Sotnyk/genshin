@@ -1,24 +1,23 @@
 import { useState } from 'react'
-import Data from './assets/characterData.json'
+import data from './assets/characterData.json'
 import './App.scss'
 
 
 function App() {
-  const [characterInfo, setCharacterInfo] = useState()
+  const [characterInfo, setCharacterInfo] = useState();
   const [buttonState, setButtonState] = useState(false);
   const changeStyle = () => {
-    if (buttonState) {
-      return (['active-button', 'active-list'])
-    } else {
-      return (['', ''])
-    }
+    if (buttonState) return (['active-button', 'active-list']);
+    return (['', '']);
   }
+
+  const characterData = JSON.parse(JSON.stringify(data));
 
   return (
     <div className="App">
       <header>
         <section className='character'>
-          <div className="character__backgroung" style={{ backgroundImage: `url('../src/image/charecters/dehya_tall.png')` }}></div>
+          <div className="character__backgroung" style={{ backgroundImage: `url(${characterData[0].images.full})` }}></div>
           <h1 className="character__name">Дех'я</h1>
         </section>
         <section className='level'>
@@ -39,10 +38,10 @@ function App() {
         </ul>
       </nav>
       <main >
-        <section className='select-resourse'> 
+        <section className='select-resourse'>
           <select className='select-resourse__select' name="select-resourse">
-          <option data-count="1" selected>Вознесіння</option>
-          <option data-count="2" >Таланти</option>
+            <option data-count="1" defaultValue >Вознесіння</option>
+            <option data-count="2" >Таланти</option>
           </select>
         </section>
         <section className='resourse resourse-upgrade'>
@@ -85,7 +84,7 @@ function App() {
             </div>
           </section>
           <section className='resourse__array'>
-            <h3 className="resourse__array__title resourse-title">Елементи ворогів</h3>
+            <h3 className="resourse__array__title resourse-title">Лут з монстрів</h3>
             <div className="resourse__array__elements upgrade-materials">
               <div className='upgrade-materials__element'>
                 <div className="upgrade-materials__element__backgroung" style={{ backgroundImage: `url('')` }}></div>
@@ -102,7 +101,7 @@ function App() {
             </div>
           </section>
           <section className='resourse__array'>
-            <h3 className="resourse__array__title resourse-title">Диковинки</h3>
+            <h3 className="resourse__array__title resourse-title">Диковинка</h3>
             <div className="resourse__array__elements upgrade-materials">
               <div className='upgrade-materials__element'>
                 <div className="upgrade-materials__element__backgroung" style={{ backgroundImage: `url('')` }}></div>
@@ -111,7 +110,7 @@ function App() {
             </div>
           </section>
           <section className='resourse__array'>
-            <h3 className="resourse__array__title resourse-title">Елементи боса</h3>
+            <h3 className="resourse__array__title resourse-title">Лут з боса</h3>
             <div className="resourse__array__elements upgrade-materials">
               <div className='upgrade-materials__element'>
                 <div className="upgrade-materials__element__backgroung" style={{ backgroundImage: `url('')` }}></div>

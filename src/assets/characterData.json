@@ -1,9 +1,122 @@
 [
-    {
-        "id": 1,
-        "name": "Дех'я",
-        "image": "../image/charecters/dehya_tall.png",
-        "min_level": "1",
-        "max_level": "90"
+  {
+    "id": 1,
+    "name": "Дех'я",
+    "images": {
+      "small": "../images/characters/Dehya_Small.png",
+      "full": "../images/characters/Dehya_Full.png",
+      "icon": "../images/characters/Dehya_Icon.webp"
+    },
+    "element": "Піро",
+    "skills": {
+      "normal_attack": {
+        "name": "Напад піщаної бурі",
+        "icon": "../images/icons/Sandstorm_Assault.webp"
+      },
+      "elemental_skill": {
+        "name": "Розплавлене пекло",
+        "icon": "../images/icons/Molten_Inferno.webp"
+      },
+      "elemental_burst": {
+        "name": "Левовий укус",
+        "icon": "../images/icons/Leonine_Bite.webp"
       }
+    },
+    "ascension_levels": {
+      "min_level": "1",
+      "max_level": "90"
+    },
+    "ascension_materials": {
+      "ascension_gems": {
+        "agnidus_agate_sliver": {
+          "name": "Уламки агата Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Sliver.webp"
+        },
+        "agnidus_agate_fragment": {
+          "name": "Фрагмент агата Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Fragment.webp"
+        },
+        "agnidus_agate_chunk": {
+          "name": "Шмат агата Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Chunk.webp"
+        },
+        "agnidus_agate_gemstone": {
+          "name": "Агат Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Gemstone.webp"
+        }
+      },
+      "enemy_drops": {
+        "faded_red_satin": {
+          "name": "Потьмянілий червоний сатин",
+          "icon": "../images/icons/Faded_Red_Satin.webp"
+        },
+        "trimmed_red_silk": {
+          "name": "Оздоблений червоний шовк",
+          "icon": "../images/icons/Trimmed_Red_Silk.webp"
+        },
+        "rich_red_brocade": {
+          "name": "Золототканий червоний шовк",
+          "icon": "../images/icons/Rich_Red_Brocade.webp"
+        }
+      },
+      "daily_boss_drop": {
+        "name": "Світлопровідний тетраедр",
+        "icon": "../images/icons/Light_Guiding_Tetrahedron.webp"
+      },
+      "local_specialty": {
+        "name": "Лялечка піщаного жировика",
+        "icon": "../images/icons/Sand_Grease_Pupa.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    },
+    "talent_levels": {
+      "min_level": "1",
+      "max_level": "10"
+    },
+    "talent_materials": {
+      "talent_books": {
+        "teachings_of_praxis": {
+          "name": "Вчення про «Практику»",
+          "icon": "../images/icons/Teachings_of_Praxis.webp"
+        },
+        "guide_of_praxis": {
+          "name": "Настанови про «Практику»",
+          "icon": "../images/icons/Guide_of_Praxis.webp"
+        },
+        "philosophies_of_praxis": {
+          "name": "Філософія про «Практику»",
+          "icon": "../images/icons/Philosophies_of_Praxis.webp"
+        }
+      },
+      "enemy_drops": {
+        "faded_red_satin": {
+          "name": "Потьмянілий червоний сатин",
+          "icon": "../images/icons/Faded_Red_Satin.webp"
+        },
+        "trimmed_red_silk": {
+          "name": "Оздоблений червоний шовк",
+          "icon": "../images/icons/Trimmed_Red_Silk.webp"
+        },
+        "rich_red_brocade": {
+          "name": "Золототканий червоний шовк",
+          "icon": "../images/icons/Rich_Red_Brocade.webp"
+        }
+      },
+      "weekly_boss_drop": {
+        "name": "Нитки маріонетки",
+        "icon": "../images/icons/Puppet_Strings.webp"
+      },
+      "crown_of_insight": {
+        "name": "Вінець Мудрості",
+        "icon": "../images/icons/Crown_of_Insight.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    }
+  }
 ]

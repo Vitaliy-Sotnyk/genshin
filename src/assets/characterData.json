@@ -1,6 +1,254 @@
 [
   {
     "id": 1,
+    "name": "Альбедо",
+    "images": {
+      "small": "",
+      "full": "",
+      "icon": "../images/characters/Albedo_Icon.webp"
+    },
+    "element": {
+      "name": "Гео",
+      "icon": "",
+      "background": "../images/elemental-backgrounds/geo_video.webm"
+    },
+    "skills": {
+      "normal_attack": {
+        "name": "Стиль фехтування Західного вітру: Крейда",
+        "icon": "../images/icons/Favonius_Bladework_-_Weiss.webp"
+      },
+      "elemental_skill": {
+        "name": "Абіогенез: Сонячна ізотома",
+        "icon": "../images/icons/Abiogenesis_Solar_Isotoma.webp"
+      },
+      "elemental_burst": {
+        "name": "Обряд походження: Тектонічний приплив",
+        "icon": "../images/icons/Rite_of_Progeniture_Tectonic_Tide.webp"
+      }
+    },
+    "ascension_levels": {
+      "min_level": "1",
+      "max_level": "90"
+    },
+    "ascension_materials": {
+      "ascension_gems": {
+        "prithiva_topaz_sliver": {
+          "name": "Крихти топазу Прітхва",
+          "icon": "../images/icons/Prithiva_Topaz_Sliver.webp"
+        },
+        "prithiva_topaz_fragment": {
+          "name": "Уламок топазу Прітхва",
+          "icon": "../images/icons/Prithiva_Topaz_Fragment.webp"
+        },
+        "prithiva_topaz_chunk": {
+          "name": "Шмат топазу Прітхва",
+          "icon": "../images/icons/Prithiva_Topaz_Chunk.webp"
+        },
+        "prithiva_topaz_gemstone": {
+          "name": "Камінь топазу Прітхва",
+          "icon": "../images/icons/Prithiva_Topaz_Gemstone.webp"
+        }
+      },
+      "enemy_drops": {
+        "divining_scroll": {
+          "name": "Сувій ворожіння",
+          "icon": "../images/icons/Divining_Scroll.webp"
+        },
+        "sealed_scroll": {
+          "name": "Запечатаний сувій",
+          "icon": "../images/icons/Sealed_Scroll.webp"
+        },
+        "forbidden_curse_scroll": {
+          "name": "Сувій забороненого прокляття",
+          "icon": "../images/icons/Forbidden_Curse_Scroll.webp"
+        }
+      },
+      "daily_boss_drop": {
+        "name": "Базальтова колона",
+        "icon": "../images/icons/Basalt_Pillar.webp"
+      },
+      "local_specialty": {
+        "name": "Цецилія",
+        "icon": "../images/icons/Cecilia.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    },
+    "talent_levels": {
+      "min_level": "1",
+      "max_level": "10"
+    },
+    "talent_materials": {
+      "talent_books": {
+        "teachings_of_ballad": {
+          "name": "Вчення про «Поезію»",
+          "icon": "../images/icons/Teachings_of_Ballad.webp"
+        },
+        "guide_of_ballad": {
+          "name": "Вказівки про «Поезію»",
+          "icon": "../images/icons/Guide_of_Ballad.webp"
+        },
+        "philosophies_of_ballad": {
+          "name": "Філософія про «Поезію»",
+          "icon": "../images/icons/Philosophies_of_Ballad.webp"
+        }
+      },
+      "enemy_drops": {
+        "divining_scroll": {
+          "name": "Сувій ворожіння",
+          "icon": "../images/icons/Divining_Scroll.webp"
+        },
+        "sealed_scroll": {
+          "name": "Запечатаний сувій",
+          "icon": "../images/icons/Sealed_Scroll.webp"
+        },
+        "forbidden_curse_scroll": {
+          "name": "Сувій забороненого прокляття",
+          "icon": "../images/icons/Forbidden_Curse_Scroll.webp"
+        }
+      },
+      "weekly_boss_drop": {
+        "name": "Ріг кита-пожирача неба",
+        "icon": "../images/icons/Tusk_of_Monoceros_Caeli.webp"
+      },
+      "crown_of_insight": {
+        "name": "Вінець Мудрості",
+        "icon": "../images/icons/Crown_of_Insight.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Амбер",
+    "images": {
+      "small": "",
+      "full": "",
+      "icon": "../images/characters/Amber_Icon.webp"
+    },
+    "element": {
+      "name": "Піро",
+      "icon": "",
+      "background": "../images/elemental-backgrounds/pyro_video.webm"
+    },
+    "skills": {
+      "normal_attack": {
+        "name": "Божественна лучниця",
+        "icon": "../images/icons/Sharpshooter.webp"
+      },
+      "elemental_skill": {
+        "name": "Вибухонебезпечна іграшка",
+        "icon": "../images/icons/Explosive_Puppet.webp"
+      },
+      "elemental_burst": {
+        "name": "Град стріл",
+        "icon": "../images/icons/Fiery_Rain.webp"
+      }
+    },
+    "ascension_levels": {
+      "min_level": "1",
+      "max_level": "90"
+    },
+    "ascension_materials": {
+      "ascension_gems": {
+        "agnidus_agate_sliver": {
+          "name": "Крихти агату Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Sliver.webp"
+        },
+        "agnidus_agate_fragment": {
+          "name": "Уламок агату Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Fragment.webp"
+        },
+        "agnidus_agate_chunk": {
+          "name": "Шмат агату Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Chunk.webp"
+        },
+        "agnidus_agate_gemstone": {
+          "name": "Камінь агату Аґнідус",
+          "icon": "../images/icons/Agnidus_Agate_Gemstone.webp"
+        }
+      },
+      "enemy_drops": {
+        "firm_arrowhead": {
+          "name": "Міцне вістря",
+          "icon": "../images/icons/Firm_Arrowhead.webp"
+        },
+        "sharp_arrowhead": {
+          "name": "Гостре вістря",
+          "icon": "../images/icons/Sharp_Arrowhead.webp"
+        },
+        "weathered_arrowhead": {
+          "name": "Гартоване вістря",
+          "icon": "../images/icons/Weathered_Arrowhead.webp"
+        }
+      },
+      "daily_boss_drop": {
+        "name": "Витік вічного полум'я",
+        "icon": "../images/icons/Everflame_Seed.webp"
+      },
+      "local_specialty": {
+        "name": "Трава-лампа",
+        "icon": "../images/icons/Small_Lamp_Grass.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    },
+    "talent_levels": {
+      "min_level": "1",
+      "max_level": "10"
+    },
+    "talent_materials": {
+      "talent_books": {
+        "teachings_of_freedom": {
+          "name": "Вчення про «Свободу»",
+          "icon": "../images/icons/Teachings_of_Freedom.webp"
+        },
+        "guide_of_freedom": {
+          "name": "Вказівки про «Свободу»",
+          "icon": "../images/icons/Guide_of_Freedom.webp"
+        },
+        "philosophies_of_freedom": {
+          "name": "Філософія про «Свободу»",
+          "icon": "../images/icons/Philosophies_of_Freedom.webp"
+        }
+      },
+      "enemy_drops": {
+        "firm_arrowhead": {
+          "name": "Міцне вістря",
+          "icon": "../images/icons/Firm_Arrowhead.webp"
+        },
+        "sharp_arrowhead": {
+          "name": "Гостре вістря",
+          "icon": "../images/icons/Sharp_Arrowhead.webp"
+        },
+        "weathered_arrowhead": {
+          "name": "Гартоване вістря",
+          "icon": "../images/icons/Weathered_Arrowhead.webp"
+        }
+      },
+      "weekly_boss_drop": {
+        "name": "Подих Буревія",
+        "icon": "../images/icons/Dvalin's_Sigh.webp"
+      },
+      "crown_of_insight": {
+        "name": "Вінець Мудрості",
+        "icon": "../images/icons/Crown_of_Insight.webp"
+      },
+      "mora": {
+        "name": "Мора",
+        "icon": "../images/icons/Mora.webp"
+      }
+    }
+  },
+  {
+    "id": 12,
     "name": "Дех'я",
     "images": {
       "small": "../images/characters/Dehya_Small.png",
@@ -33,19 +281,19 @@
     "ascension_materials": {
       "ascension_gems": {
         "agnidus_agate_sliver": {
-          "name": "Уламки агата Аґнідус",
+          "name": "Крихти агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Sliver.webp"
         },
         "agnidus_agate_fragment": {
-          "name": "Фрагмент агата Аґнідус",
+          "name": "Уламок агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Fragment.webp"
         },
         "agnidus_agate_chunk": {
-          "name": "Шмат агата Аґнідус",
+          "name": "Шмат агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Chunk.webp"
         },
         "agnidus_agate_gemstone": {
-          "name": "Агат Аґнідус",
+          "name": "Камінь агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Gemstone.webp"
         }
       },
@@ -87,7 +335,7 @@
           "icon": "../images/icons/Teachings_of_Praxis.webp"
         },
         "guide_of_praxis": {
-          "name": "Настанови про «Практику»",
+          "name": "Вказівки про «Практику»",
           "icon": "../images/icons/Guide_of_Praxis.webp"
         },
         "philosophies_of_praxis": {

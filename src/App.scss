@@ -1,6 +1,9 @@
 $main-value: 4px;
 $value-persent: 5%;
-$numeral-value-color: rgba(255, 255, 255, .15);
+$select-place-color: rgba(255, 255, 255, .15);
+$select-place-color-hover: rgba(255, 255, 255, .6);
+$select-place-option: rgba(255, 255, 255, 1);
+$numeral-value-color: rgba(255, 255, 255, .5);
 $gradient-line-color: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.3) 100%);
 $gradient-line-color-hover: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,0.3) 100%);
 $button-color: rgb(239, 205, 86);
@@ -104,26 +107,21 @@ $black-color: black;
     }
     &__name{
       @include displayFlex(row, space-between, center);
-      position: absolute;
+      position: absolute !important;
       left: 0;
       top: 0;
-      max-width: $main-value*27.5;
-      width: 100%;
-      transition: 1.5s;
 
-      img {
-        max-height: $main-value*7;
-        height: 100%;
-        transform: rotate(180deg);
-        transition: 2s;
-      }
+      &__value{
+        position: relative;
+        
+        &__image{
+          position: absolute;
+          height: $main-value*8;
+          width: $main-value*8;
 
-      &:hover{
-        max-width: $main-value*32;  
-        img {
-          transform: rotate(180deg) scale(1.2);
         }
       }
+      
     }
   }
   
@@ -153,6 +151,20 @@ main{
   
   .select-resourse{
     width: 100%;
+    
+    &__selected{
+      @include displayFlex(row, center, center);
+    
+      &__value{
+        height: $main-value*9;
+
+        &__image{
+          height: $main-value*7.5;
+          width: $main-value*7.5;
+        }
+      }
+    }
+
   }
 
   .resourse{
@@ -194,7 +206,7 @@ main{
   
   .upgrade-materials{
     @include displayFlex(row, space-around, center);
-    margin: $value-persent*.2 0;
+    margin: $value-persent*.2  $value-persent*2;
     
     &__element{
       @include displayFlex(column, space-between, center);
@@ -226,3 +238,107 @@ main{
     }
   }
 }
+
+.select-container{
+  position: relative;
+
+  #select-resourse-arrow, 
+  #select-character-name-arrow{
+    display: none;
+
+    &:checked + .select-container__value{
+      background-color: $select-place-color-hover;
+      border-radius: $main-value*4 $main-value*4 0 0;
+
+      & img{
+        transform: rotate(90deg);
+        height: 90%;
+      }
+    }
+
+    &:checked ~ .select-container__options{
+      max-height: 70px;
+    }
+  }
+  &__value{
+    cursor: pointer;
+    @include displayFlex(row, center, center);
+    background-color: $select-place-color;
+    border-radius: $main-value*4;
+    min-width: 200px;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    transition: 1s;
+
+    &__image{
+      @include displayFlex(row, center, center);
+      position: absolute;
+      left: $value-persent*.5;
+
+      transform:rotate(180deg) ;
+  
+      img{
+        transition: .5s;
+        height: 70%;
+      }
+    }
+
+    &:hover{
+      background-color: $select-place-color-hover;
+
+      img{
+        height: 90%;
+      }
+    }
+  }
+
+  &__options{
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    max-height: 0;
+    min-width: 200px;
+    width: 100%;
+    max-width: 350px;
+    background-color: $button-color;
+    border-radius: 0 0 $main-value*4 $main-value*4;
+    transition: 0.5s;
+    z-index: 99;
+
+    &__item{
+      @include displayFlex(row, center, center);
+      position: relative;
+
+      & *{
+        color: $black-color;   
+      }
+
+      &__image{
+        @include displayFlex(row, center, center);
+        position: absolute;
+        left: $value-persent*.5;
+        height: 30px;
+        width: 30px;
+        opacity: 0;
+        transform:rotate(180deg);
+    
+        &.options-selected{
+          opacity: 1;
+        }
+
+        img{
+          transition: .5s;
+          height: 70%;
+        }
+      }
+    }
+
+    &:hover{
+      background-color: $button-color-hover;
+    }
+  }
+}
+
+

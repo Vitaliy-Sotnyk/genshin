@@ -40,6 +40,7 @@ body, body *{
 }
 
 button{
+  cursor: pointer;
   @include textSize(9px, 0, 700);
   border: none;
 }
@@ -53,21 +54,21 @@ h3{
 input{
   border: none;
   transition: 0.5s;
+  cursor: pointer;
+  @include textSize(9px, .3, 500);
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
   &:focus,
   &:hover{
     outline: none;
     background-color: $input-color-hover;
   }
-}
-
-input{
-  @include textSize(9px, .3, 500);
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+  
   &[type=number]{
     -moz-appearance: textfield;
   }

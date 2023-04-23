@@ -1,0 +1,56 @@
+[
+    {
+      "ascension": 0,
+      "crystal-rarity": 2,
+      "crystal-amount": 1,
+      "local-specialty": 3,
+      "boss-drop": 0,
+      "enemy-drop-rarity": 1,
+      "enemy-drop": 3
+    },
+    {
+      "ascension": 1,
+      "crystal-rarity": 3,
+      "crystal-amount": 3,
+      "local-specialty": 10,
+      "boss-drop": 2,
+      "enemy-drop-rarity": 1,
+      "enemy-drop": 15
+    },
+    {
+      "ascension": 2,
+      "crystal-rarity": 3,
+      "crystal-amount": 6,
+      "local-specialty": 20,
+      "boss-drop": 4,
+      "enemy-drop-rarity": 2,
+      "enemy-drop": 12
+    },
+    {
+      "ascension": 3,
+      "crystal-rarity": 4,
+      "crystal-amount": 3,
+      "local-specialty": 30,
+      "boss-drop": 8,
+      "enemy-drop-rarity": 2,
+      "enemy-drop": 18
+    },
+    {
+      "ascension": 4,
+      "crystal-rarity": 4,
+      "crystal-amount": 6,
+      "local-specialty": 45,
+      "boss-drop": 12,
+      "enemy-drop-rarity": 3,
+      "enemy-drop": 12
+    },
+    {
+      "ascension": 5,
+      "crystal-rarity": 5,
+      "crystal-amount": 6,
+      "local-specialty": 60,
+      "boss-drop": 20,
+      "enemy-drop-rarity": 3,
+      "enemy-drop": 24
+    }
+  ]

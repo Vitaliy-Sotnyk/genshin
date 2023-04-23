@@ -1,12 +1,68 @@
+$main-value: 4px;
+$value-persent: 5%;
+$numeral-value-color: rgba(255, 255, 255, .15);
+$gradient-line-color: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.3) 100%);
+$gradient-line-color-hover: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,0.3) 100%);
+$button-color: rgb(239, 205, 86);
+$button-color-hover: rgb(255, 215, 72);
+$black-color: black;
+
+@mixin displayFlex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin selectValue($height, $width){
+  border-radius: $main-value*2.5;
+  background-color: $numeral-value-color;
+  line-height: $main-value*$height;
+  height: $main-value*$height;
+  width: $width;
+  text-align: center;
+}
+
 @font-face {
   font-family: 'Genshin_Font';
   src: local('Genshin_Font'), url(./assets/fonts/Genshin_Font.woff) format('woff');
 }
 
 .App {
+  @include displayFlex(row, center, center);
   width: 100%;
   height: 100%;
   position: relative;
+  
+}
+.container{
+  @include displayFlex(row, space-between, normal);
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+
+  @media(min-width: 320px) {
+      margin: 0 $value-persent*1.25;
+      min-width: $main-value * 78;
+      max-width: $main-value * 150;
+    }
+  
+    @media(min-width: 769px) {
+      padding: $value-persent*0.4 0;
+      margin: 0 $value-persent*1;
+      min-width: $main-value * 180;
+      max-width: $main-value * 350;
+      max-height: 100vh;
+    }
+    @media(min-width: 1440px) {
+      margin: 0 $value-persent*2;
+    }
+    @media(min-width: 1600px) {
+      margin: 0 $value-persent*3;
+    }
 }
 
 .background-video {
@@ -16,18 +72,157 @@
   top: 0;
   left: 0;
   z-index: -100;
-  overflow-x: hidden;
+  overflow: hidden;
+
+    &__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 }
 
-.background-video__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.header{
+  @include displayFlex(column,space-between, normal);
+  width: 35%;
+
+  @media(min-width: 1600px) {
+    width: 40%;
+  }
+
+  &__character{
+    @include displayFlex(column, center, center);
+    width: 100%;
+    position: relative;
+    
+    &__full-img {
+      width: 100%;
+      height: 100%;
+
+      min-width: $main-value*60;
+      max-width: $main-value*130;
+      object-fit: cover;
+    }
+    &__name{
+      @include displayFlex(row, space-between, center);
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: $main-value*27.5;
+      width: 100%;
+      transition: 1.5s;
+
+      img {
+        max-height: $main-value*7;
+        height: 100%;
+        transform: rotate(180deg);
+        transition: 2s;
+      }
+
+      &:hover{
+        max-width: $main-value*32;  
+        img {
+          transform: rotate(180deg) scale(1.2);
+        }
+      }
+    }
+  }
+  
+  &__level{
+    @include displayFlex(column, space-between, center);
+    height: $main-value*20;
+    width: 100%;
+
+    &__value{
+      @include displayFlex(row, space-between, center);
+      width: 100%;
+    }
+
+  }
 }
 
-.character__backgroung {
-  height: 45em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.numerical-value{
+  @include selectValue(8, $main-value*25);
+}
+
+main{
+  @include displayFlex(column, space-around, normal);
+  flex-wrap: wrap;
+  width: 60%;
+  max-height: 800px;
+  margin-left: $value-persent;
+  
+  .select-resourse{
+    width: 100%;
+  }
+
+  .resourse{
+    @include displayFlex(row, space-between, center);
+    flex-wrap: wrap;
+    width: 100%;
+    
+    &__array{
+      margin-top: $value-persent*.2;
+      width: 100%;
+      
+      &__title{
+        text-align: center;
+        width: 100%;
+        height: $main-value*9;
+        position: relative;
+        transition: 1.5s;
+        
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          height: $main-value*.5;
+          width: 100%;
+          background: white;
+          background: $gradient-line-color;
+          transition: 1.5s;
+        }
+        
+        &:hover{
+          &::after{
+            background: $gradient-line-color-hover;
+          }
+        }
+      }
+    }
+  }
+  
+  .upgrade-materials{
+    @include displayFlex(row, space-around, center);
+    margin: $value-persent*.2 0;
+    
+    &__element{
+      @include displayFlex(column, space-between, center);
+      
+      &__backgroung{
+        max-height: $main-value*13.5;
+      }
+    }
+  }
+
+  .small-arrea{
+    width: 30%;
+  }
+  .calculate{
+    @include displayFlex(row, center, center);
+    width: 100%;
+    
+    &__button{
+      background-color: $button-color;
+      color: $black-color;
+      padding: $main-value*2 $main-value*6;
+      border-radius: $main-value*4;
+      transition: 1s;
+    
+      &:hover{
+        background-color: $button-color-hover;
+        transform: scale(1.1);
+      }
+    }
+  }
 }

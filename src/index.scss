@@ -1,5 +1,6 @@
-$text-color-lgtstyle: rgba(0, 0, 0, 0.6);
-$navbar-text-color-lgtstyle: rgb(255, 255, 255);
+$text-color-lgtstyle: rgba(255, 255, 255, 1);
+$placeholder-color: rgba(255, 255, 255, .7);
+$input-color-hover: rgba(255, 255, 255, .3);
 
 @mixin margin {
   margin: 0;
@@ -16,12 +17,14 @@ $navbar-text-color-lgtstyle: rgb(255, 255, 255);
   margin: 0;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Oswald', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+body, body *{
+  font-family: 'Genshin_Font';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  & *{
+    color: $text-color-lgtstyle;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -36,25 +39,41 @@ body {
   }
 }
 
-#light{
-  & *{
-    color: $text-color-lgtstyle;
-  }
-  & .navbar *{
-    color: $navbar-text-color-lgtstyle;
-  }
-}
-
 button{
   @include textSize(9px, 0, 700);
-  font-style: normal;
-  font-family: 'Karla', sans-serif;
+  border: none;
 }
-h2{
-  @include textSize(16px, 0, 400);
+
+h1, h2{
+  @include textSize(14px, 0, 400);
 }
 h3{
   @include textSize(10px, .3, 500);
+}
+input{
+  border: none;
+  transition: 0.5s;
+
+  &:focus,
+  &:hover{
+    outline: none;
+    background-color: $input-color-hover;
+  }
+}
+
+input{
+  @include textSize(9px, .3, 500);
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type=number]{
+    -moz-appearance: textfield;
+  }
+  &::placeholder{
+    color: $placeholder-color;
+  }
 }
 a{
   @include textSize(10px, .3, 500);
@@ -69,4 +88,8 @@ ul{
 li{
   @include textSize(8px, .3, 700);
   list-style: none;
+}
+
+nav{
+  display: none;
 }

@@ -41,7 +41,7 @@ body, body *{
 
 button{
   cursor: pointer;
-  @include textSize(9px, 0, 700);
+  @include textSize(9px, 0, 500);
   border: none;
 }
 

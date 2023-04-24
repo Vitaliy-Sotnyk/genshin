@@ -242,8 +242,8 @@ main{
 .select-container{
   position: relative;
 
-  #select-resourse-arrow, 
-  #select-character-name-arrow{
+  #select-resourse__selected-arrow, 
+  #header__character__name-arrow{
     display: none;
 
     &:checked + .select-container__value{

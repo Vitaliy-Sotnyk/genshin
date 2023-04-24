@@ -5,8 +5,10 @@ import "./App.scss"
 function App() {
   // const [characterInfo, setCharacterInfo] = useState();
   // const [buttonState, setButtonState] = useState(false);
-  const [selectResourseValue, setSelectResourseValue] = useState("Вознесіння")
-  // const [selectionProcess, setSelectionProcess] = useState(false);
+  const [selectCharacter, setSelectCharacter] = useState("Дех'я");
+  const [selectResourseValue, setSelectResourseValue] = useState("Вознесіння");
+  const [resourseSelectionStatus, setResourseSelectionStatus] = useState(false);
+  const [characterSelectionStatus, setCharacterSelectionStatus] = useState(false);
   // const changeStyle = () => {
   //   if (buttonState) return (["active-button", "active-list"]);
   //   return (["", ""]);
@@ -30,27 +32,27 @@ function App() {
           <div className="header__character">
             <img className="header__character__full-img" src={dehyaInfo.images.full} alt={dehyaInfo.name} />
             <div className="header__character__name select-container">
-              <input type="checkbox" id="select-character-name-arrow" />
+              <input type="checkbox" id="select-character-name-arrow" checked={characterSelectionStatus} onChange={() => setCharacterSelectionStatus((state) => !state)}/>
               <label className="header__character__name__value  select-container__value" htmlFor="select-character-name-arrow">
-                <h2>{dehyaInfo.name}</h2>
+                <h2>{selectCharacter}</h2>
                 <div className="header__character__name__value__image select-container__value__image">
                   <img src="../images/switch.png" alt="Button" />
                 </div>
               </label>
               <ul className="header__character__name__options select-container__options">
                 <li className="select-container__options__item"
-                  onClick={() => setSelectResourseValue("Дех'я")}>
+                  onClick={() => {setSelectCharacter("Дех'я"); setCharacterSelectionStatus(false)}}>
                   <h3>Дех'я</h3>
                   <div className={`select-container__options__item__image 
-                    ${selectResourseValue === "Дех'я" ? "options-selected" : ""}`}>
+                    ${selectCharacter === "Дех'я" ? "options-selected" : ""}`}>
                     <img src="../images/switch.png" alt="Button" />
                   </div>
                 </li>
                 <li className="select-container__options__item"
-                  onClick={() => setSelectResourseValue("Юла")}>
+                  onClick={() => {setSelectCharacter("Юла"); setCharacterSelectionStatus(false)}}>
                   <h3>Юла</h3>
                   <div className={`select-container__options__item__image 
-                    ${selectResourseValue === "Юла" ? "options-selected" : ""}`}>
+                    ${selectCharacter=== "Юла" ? "options-selected" : ""}`}>
                     <img src="../images/switch.png" alt="Button" />
                   </div>
                 </li>
@@ -77,7 +79,7 @@ function App() {
         <main >
           <section className="select-resourse">
             <div className="select-resourse__selected  select-container">
-              <input type="checkbox" id="select-resourse-arrow" />
+              <input type="checkbox" id="select-resourse-arrow" checked={resourseSelectionStatus} onChange={() => setResourseSelectionStatus((state) => !state)} />
               <label className="select-resourse__selected__value  select-container__value" htmlFor="select-resourse-arrow">
                 <h3>{selectResourseValue}</h3>
                 <div className="select-resourse__selected__value__image select-container__value__image">
@@ -86,7 +88,7 @@ function App() {
               </label>
               <ul className="select-resourse__selected__options select-container__options">
                 <li className="select-container__options__item"
-                  onClick={() => setSelectResourseValue("Вознесіння")}>
+                  onClick={() => { setSelectResourseValue("Вознесіння"); setResourseSelectionStatus(false) }}>
                   <h3>Вознесіння</h3>
                   <div className={`select-container__options__item__image 
                     ${selectResourseValue === "Вознесіння" ? "options-selected" : ""}`}>
@@ -94,7 +96,7 @@ function App() {
                   </div>
                 </li>
                 <li className="select-container__options__item"
-                  onClick={() => setSelectResourseValue("Таланти")}>
+                  onClick={() => {setSelectResourseValue("Таланти"); setResourseSelectionStatus(false)}}>
                   <h3>Таланти</h3>
                   <div className={`select-container__options__item__image 
                     ${selectResourseValue === "Таланти" ? "options-selected" : ""}`}>
@@ -104,6 +106,7 @@ function App() {
               </ul>
             </div>
           </section>
+
           <section className="resourse">
             <section className="resourse__array">
               <h3 className="resourse__array__title resourse-title">Книги досвіду</h3>

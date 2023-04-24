@@ -1,20 +1,21 @@
 [
   {
     "exp_book": {
-      "wanderer_book":{
+      "wanderer_book": {
         "name": "Wanderer'sAdvice",
         "icon": "../images/icons/Wanderer's_Advice.webp"
       },
-      "adventurer_book":{
+      "adventurer_book": {
         "name": "Adventurer's Experience",
         "icon": "../images/icons/Adventurer's_Experience.webp"
       },
-      "hero_book":{
+      "hero_book": {
         "name": "Hero's Wit",
         "icon": "../images/icons/Hero's_Wit.webp"
       }
     }
-  },{
+  },
+  {
     "id": 1,
     "name": "Альбедо",
     "images": {

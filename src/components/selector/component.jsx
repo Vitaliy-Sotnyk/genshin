@@ -2,6 +2,7 @@ import { useCharacterSelectorContext } from "../../contexts/characters-selector-
 import { v4 as uuidv4 } from "uuid";
 import { SelectorListItem } from "../selector-list-item/component";
 import { CharacterLevelingOptions, useLevelingOptionsContext } from "../../contexts/leveling-options-selector-context";
+import { useMemo } from "react";
 
 export const SelectorTypes = Object.freeze({
   characterSelector: 'header__character__name',
@@ -11,6 +12,15 @@ export const SelectorTypes = Object.freeze({
 export const Selector = ({ nameOfClass }) => {
   const { selectCharacter, characterSelectionStatus, charactersData, handleSelectorChange } = useCharacterSelectorContext();
   const { selectLevelingOptionValue, levelingOptionSelectionStatus, handleSelectLevelingOptionChange } = useLevelingOptionsContext();
+
+  const charactersList = useMemo(() => charactersData.map(character => (
+    <SelectorListItem key={uuidv4()} selectorType={nameOfClass} itemName={character.name} />
+  )), [charactersData]);
+
+  const levelingOptions = Object.values(CharacterLevelingOptions);
+  const levelingOptionsList = useMemo(() => levelingOptions.map(option => (
+    <SelectorListItem key={uuidv4()} selectorType={nameOfClass} itemName={option} />
+  )), [levelingOptions]);
 
   return (
     <div className={`${nameOfClass} select-container`}>
@@ -27,16 +37,10 @@ export const Selector = ({ nameOfClass }) => {
       </label>
       <ul className={`${nameOfClass}__options select-container__options`}>
         {
-          nameOfClass === SelectorTypes.characterSelector &&
-          charactersData.map(character =>
-            <SelectorListItem key={uuidv4()} selectorType={nameOfClass} itemName={character.name} />
-          )
+          nameOfClass === SelectorTypes.characterSelector && charactersList
         }
         {
-          nameOfClass === SelectorTypes.levelingOptionsSelector &&
-          Object.values(CharacterLevelingOptions).map(option =>
-            <SelectorListItem key={uuidv4()} selectorType={nameOfClass} itemName={option} />
-          )
+          nameOfClass === SelectorTypes.levelingOptionsSelector && levelingOptionsList
         }
       </ul>
     </div>

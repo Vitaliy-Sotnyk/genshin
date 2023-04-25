@@ -5,6 +5,7 @@ import { SelectorTypes } from "../selector/component";
 export const SelectorListItem = ({ itemName, selectorType }) => {
   const { handleListItemClick, selectCharacter } = useCharacterSelectorContext();
   const { handleLevelingOptionClick, selectLevelingOptionValue } = useLevelingOptionsContext();
+  
   return (
     <li className="select-container__options__item"
       onClick={() => selectorType === SelectorTypes.characterSelector

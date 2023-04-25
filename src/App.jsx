@@ -3,6 +3,7 @@ import expBooksData from "./assets/expBooks.json"
 import "./App.scss"
 import { useCharacterSelectorContext } from "./contexts/characters-selector-context";
 import { Selector, SelectorTypes } from "./components/selector";
+import { ResourceArray } from "./components/resource-array";
 
 function App() {
   // const [characterInfo, setCharacterInfo] = useState();
@@ -59,23 +60,8 @@ function App() {
               </section>
 
               <section className="resourse">
-                <section className="resourse__array">
-                  <h3 className="resourse__array__title resourse-title">Книги досвіду</h3>
-                  <div className="resourse__array__elements upgrade-materials">
-                    <div className="upgrade-materials__element">
-                      <img className="upgrade-materials__element__backgroung" src={expBooks.wanderer_book.icon} alt={expBooks.wanderer_book.name} />
-                      <input type="" className="numerical-value" placeholder={0} />
-                    </div>
-                    <div className="upgrade-materials__element">
-                      <img className="upgrade-materials__element__backgroung" src={expBooks.adventurer_book.icon} alt={expBooks.adventurer_book.name} />
-                      <input type="" className="numerical-value" placeholder={0} />
-                    </div>
-                    <div className="upgrade-materials__element">
-                      <img className="upgrade-materials__element__backgroung" src={expBooks.hero_book.icon} alt={expBooks.hero_book.name} />
-                      <input type="" className="numerical-value" placeholder={0} />
-                    </div>
-                  </div>
-                </section>
+                <ResourceArray title={'Книги досвіду'} resourceList={expBooks} />
+                {/*далі не переписувала, бо змінений json на іншій гілці*/}
                 <section className="resourse__array">
                   <h3 className="resourse__array__title resourse-title">Кристали</h3>
                   <div className="resourse__array__elements upgrade-materials">

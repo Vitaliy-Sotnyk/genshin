@@ -32,19 +32,19 @@
     },
     "ascension_materials": {
       "ascension_gems": {
-        "prithiva_topaz_sliver": {
+        "sliver": {
           "name": "Крихти топазу Прітхва",
           "icon": "../images/icons/Prithiva_Topaz_Sliver.webp"
         },
-        "prithiva_topaz_fragment": {
+        "fragment": {
           "name": "Уламок топазу Прітхва",
           "icon": "../images/icons/Prithiva_Topaz_Fragment.webp"
         },
-        "prithiva_topaz_chunk": {
+        "chunk": {
           "name": "Шмат топазу Прітхва",
           "icon": "../images/icons/Prithiva_Topaz_Chunk.webp"
         },
-        "prithiva_topaz_gemstone": {
+        "gemstone": {
           "name": "Камінь топазу Прітхва",
           "icon": "../images/icons/Prithiva_Topaz_Gemstone.webp"
         }
@@ -156,19 +156,19 @@
     },
     "ascension_materials": {
       "ascension_gems": {
-        "agnidus_agate_sliver": {
+        "sliver": {
           "name": "Крихти агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Sliver.webp"
         },
-        "agnidus_agate_fragment": {
+        "fragment": {
           "name": "Уламок агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Fragment.webp"
         },
-        "agnidus_agate_chunk": {
+        "chunk": {
           "name": "Шмат агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Chunk.webp"
         },
-        "agnidus_agate_gemstone": {
+        "gemstone": {
           "name": "Камінь агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Gemstone.webp"
         }
@@ -280,19 +280,19 @@
     },
     "ascension_materials": {
       "ascension_gems": {
-        "agnidus_agate_sliver": {
+        "sliver": {
           "name": "Крихти агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Sliver.webp"
         },
-        "agnidus_agate_fragment": {
+        "fragment": {
           "name": "Уламок агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Fragment.webp"
         },
-        "agnidus_agate_chunk": {
+        "chunk": {
           "name": "Шмат агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Chunk.webp"
         },
-        "agnidus_agate_gemstone": {
+        "gemstone": {
           "name": "Камінь агату Аґнідус",
           "icon": "../images/icons/Agnidus_Agate_Gemstone.webp"
         }
